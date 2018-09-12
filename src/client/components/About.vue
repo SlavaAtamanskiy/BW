@@ -1,4 +1,3 @@
-
 <template>
   <div class="about">
     <p>tel: {{ phone }}</p>
@@ -12,11 +11,11 @@
 <script>
 export default {
   name: "About",
-  data(){
+  data() {
     return {
-      phone:'+380967401591',
-      github:"https://github.com/SlavaAtamanskiy",
-      facebook:"https://www.facebook.com/profile.php?id=100015992616603"
+      phone: "+380967401591",
+      github: "https://github.com/SlavaAtamanskiy",
+      facebook: "https://www.facebook.com/profile.php?id=100015992616603"
     };
   }
 };
