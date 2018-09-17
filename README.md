@@ -1,4 +1,4 @@
-# bw
+# Simple Database
 
 ## Simple database using MongoDB, Node.js at backend and Vue.js with vuetify styles at frontend.
 
