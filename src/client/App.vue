@@ -2,7 +2,7 @@
   <v-app>
     <app-header></app-header>
       <v-content class="bw-container">
-          <router-view></router-view>
+          <app-body></app-body>
       </v-content>
     <app-footer></app-footer>
   </v-app>

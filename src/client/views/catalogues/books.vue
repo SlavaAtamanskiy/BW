@@ -35,7 +35,8 @@
         <v-checkbox
           v-model="props.selected"
           primary
-          hide-details></v-checkbox>
+          hide-details>
+        </v-checkbox>
       </td>
       <td class="text-xs-left">{{ props.item.title }}</td>
       <td class="text-xs-left">{{ props.item.author }}</td>
