@@ -2,9 +2,14 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-import routes from "./routes/books.js";
-import book from "./controllers/books.js";
 import config from "../config.json";
+
+import bookRoutes from "./routes/books.js";
+import book from "./controllers/books.js";
+import wordRoutes from "./routes/words.js";
+import word from "./controllers/words.js";
+import userRoutes from "./routes/users.js";
+import user from "./controllers/users.js";
 
 mongoose.Promise = global.Promise;
 let app = express();
@@ -22,7 +27,9 @@ mongoose.connect(connectionPath, { useNewUrlParser: true }, (err, res) => {
 });
 
 //creates rest API
-routes.bookRoutes(app, book);
+bookRoutes.bookRoutes(app, book);
+wordRoutes.wordRoutes(app, word);
+userRoutes.userRoutes(app, user);
 
 app.listen(PORT, (err) => {
 if (err){
