@@ -99,6 +99,7 @@ export default {
 
         let hide = this.$modal.hide.bind(this.$modal);
         let mutation = this.mode === "create" ? 'createWord' : 'editWord';
+      
         let payload = {
             data: this.editedItem,
             callback: (res, commit) => {

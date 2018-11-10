@@ -16,7 +16,7 @@
     :items="words"
     :rows-per-page-items="rows"
     v-model="selected"
-    item-key="title"
+    item-key="word"
     select-all
     class="elevation-1"
   >

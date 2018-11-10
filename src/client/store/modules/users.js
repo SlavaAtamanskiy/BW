@@ -67,12 +67,12 @@ const mutations = {
   },
   editUser (state, item) {
     let i = state.all.findIndex(itm => itm._id === item._id);
-    if (i) state.all.splice(i, 1, item);
+    if (i>=0) state.all.splice(i, 1, item);
     //if (i) state.all[i] = {...item};
   },
   deleteUser (state, id) {
     let i = state.all.findIndex(itm => itm._id === id);
-    if (i) state.all.splice(i, 1);
+    if (i>=0) state.all.splice(i, 1);
   }
 }
 
