@@ -2,8 +2,9 @@
   <v-footer app
     class="hidden-sm-and-down"
     dark
-    height="auto"
-    fixed>
+    absolute
+    height="auto">
+
     <v-card
       class="flex"
       flat
@@ -30,7 +31,12 @@
   </v-footer>
 </template>
 
+<style scoped>
+
+</style>
+
 <script>
+
 export default {
   name: "AppFooter",
   data: () => ({
@@ -44,4 +50,5 @@ export default {
     })
 
 };
+
 </script>
