@@ -8,6 +8,8 @@ import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import colors from 'vuetify/es5/util/colors';
 
+export const bus = new Vue();
+
 Vue.use(Vuetify, {
   theme:{
    primary: colors.blueGrey.darken1,

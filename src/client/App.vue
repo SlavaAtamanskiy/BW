@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <app-header></app-header>
+    <app-drawer></app-drawer>
+    <app-header ></app-header>
       <v-content class="bw-container">
           <app-body></app-body>
       </v-content>
@@ -9,17 +10,29 @@
 </template>
 
 <script>
+
 import AppHeader from "@/client/components/Header.vue";
 import AppFooter from "@/client/components/Footer.vue";
 import AppBody from "@/client/components/Body.vue";
+import AppDrawer from "@/client/components/Drawer.vue";
+
 export default {
   name: "App",
   components: {
     AppHeader,
     AppBody,
-    AppFooter
-  }
+    AppFooter,
+    AppDrawer
+  },
+  data: () => ({
+    drawer: null,
+    items: [
+          { title: 'Home', icon: 'dashboard' },
+          { title: 'About', icon: 'question_answer' }
+    ]
+  })
 };
+
 </script>
 
 <style scoped>

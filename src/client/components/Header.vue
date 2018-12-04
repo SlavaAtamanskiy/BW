@@ -4,27 +4,9 @@
       color="blue-grey darken-2"
       dark>
 
-      <v-menu
-        :nudge-bottom = "48"
-        :nudge-width = "100"
-        transition="slide-x-transition"
-        bottom
-        left>
-
-        <v-toolbar-title slot="activator" class="ma-3">
-          <span>Menu</span>
-          <v-icon dark>arrow_drop_down</v-icon>
-        </v-toolbar-title>
-
-        <v-list>
-          <v-list-tile
-            v-for="item in items"
-            :key="item"
-            @click="">
-            <v-list-tile-title v-text="item"></v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
+      <v-btn icon v-on:click="toggleDrawer">
+        <v-icon>more_vert</v-icon>
+      </v-btn>
 
       <v-toolbar-title></v-toolbar-title>
 
@@ -44,34 +26,43 @@
       <v-btn icon>
         <v-icon>favorite</v-icon>
       </v-btn>
-      <v-btn icon>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
 
   </v-toolbar>
 </template>
 
 <style scoped>
+
+.v-toolbar {
+   opacity: .5;
+}
+
 .v-btn__content a {
   text-decoration: none;
   font-weight: bold;
   color: #ffff;
 }
+
 .v-btn__content a.router-link-exact-active {
   color: #ffff;
 }
+
 .v-btn__content a:hover {
   color: #ffff;
 }
+
 </style>
 
 <script>
+
+import { bus } from "@/main.js";
+
 export default {
   name: "AppHeader",
-  data: () => ({
-    items: [
-      'All', 'Family', 'Friends', 'Coworkers'
-    ]
-  })
+  methods: {
+    toggleDrawer () {
+      bus.$emit("toggleDrawerEvent");
+    }
+  }
 };
+
 </script>
