@@ -13,7 +13,7 @@ export const bus = new Vue();
 Vue.use(Vuetify, {
   theme:{
    primary: colors.blueGrey.darken1,
-   secondary: colors.grey.darken1,
+   secondary: '#687894',
    accent: colors.green.base,
    error: colors.red.base,
    warning: colors.yellow.base,

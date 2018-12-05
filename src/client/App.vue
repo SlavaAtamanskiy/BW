@@ -1,11 +1,13 @@
 <template>
   <v-app>
-    <app-drawer></app-drawer>
-    <app-header ></app-header>
-      <v-content class="bw-container">
-          <app-body></app-body>
-      </v-content>
-    <app-footer></app-footer>
+      <app-drawer app></app-drawer>
+      <app-header></app-header>
+        <v-content class="bw-container">
+           <v-container fluid>
+              <app-body></app-body>
+           </v-container>
+        </v-content>
+      <app-footer></app-footer>
   </v-app>
 </template>
 
@@ -23,20 +25,15 @@ export default {
     AppBody,
     AppFooter,
     AppDrawer
-  },
-  data: () => ({
-    drawer: null,
-    items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-    ]
-  })
+  }
 };
 
 </script>
 
 <style scoped>
+
 .bw-container {
   background-color: #ECEFF1;
 }
+
 </style>

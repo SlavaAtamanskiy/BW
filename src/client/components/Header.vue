@@ -1,11 +1,11 @@
 <template>
   <v-toolbar app
       style="width:100%;"
-      color="blue-grey darken-2"
+      class="secondary"
       dark>
 
       <v-btn icon v-on:click="toggleDrawer">
-        <v-icon>more_vert</v-icon>
+        <v-icon>{{icon}}</v-icon>
       </v-btn>
 
       <v-toolbar-title></v-toolbar-title>
@@ -32,10 +32,6 @@
 
 <style scoped>
 
-.v-toolbar {
-   opacity: .5;
-}
-
 .v-btn__content a {
   text-decoration: none;
   font-weight: bold;
@@ -58,8 +54,14 @@ import { bus } from "@/main.js";
 
 export default {
   name: "AppHeader",
+  data: () => ({
+    drawer: false,
+    icon:'menu'
+  }),
   methods: {
     toggleDrawer () {
+      this.drawer = !this.drawer;
+      this.icon = (this.drawer) ? 'arrow_back' : 'menu';
       bus.$emit("toggleDrawerEvent");
     }
   }
