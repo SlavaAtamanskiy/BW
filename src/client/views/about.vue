@@ -1,7 +1,5 @@
 <template>
-  <v-container grid-list-xl fluid class="bw-content">
-    <v-layout v-bind="binding">
-      <v-flex>
+  <v-layout column align-center justify-center fill-height>
         <v-card dark color="blue lighten-2">
           <v-card-title>
             <div>
@@ -13,9 +11,7 @@
               <About/>
           </v-card-text>
         </v-card>
-      </v-flex>
     </v-layout>
-  </v-container>
 </template>
 
 <script>
@@ -26,22 +22,13 @@ export default {
   name: "about",
   components: {
     About
-  },
-  computed: {
-     binding () {
-       const binding = {}
-       binding.column = true;
-       return binding
-     }
-   }
+  }
 };
 </script>
 
 <style scoped>
 
-.bw-content {
-  background-color: #ECEFF1;
-  padding-left: 40%;
-  padding-right: 40%;
+.card-small {
+  width:30%;
 }
 </style>

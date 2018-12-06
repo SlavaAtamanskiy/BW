@@ -1,36 +1,35 @@
 <template>
   <v-container grid-list-xl fluid class="bw-content">
     <v-layout v-bind="binding">
-      <v-flex>
-        <v-card dark color="blue lighten-2">
-          <v-card-title><Home msg="Quick menu"/></v-card-title>
-          <img src="../assets/logo.jpg">
-          <v-card-text>one</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card dark color="lime">
-          <v-card-text>two</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card dark color="light-green">
-          <v-card-text>three</v-card-text>
-        </v-card>
-      </v-flex>
+      <div v-for="(item, i) in items" :key="i">
+           <v-flex v-if="item.type === 'txt'">
+               <text-rubric  :title="item.title" :contens="item.contens" :color="item.color" :dark="item.dark"/>
+           </v-flex>
+           <v-flex v-else>
+               <img-rubric :title="item.title" :contens="item.contens" :color="item.color" :dark="item.dark" :images="item.images"/>
+           </v-flex>
+      </div>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+
 // @ is an alias to /src
-import Home from "@/client/components/Home.vue";
+import TextRubric from "@/client/components/home/text_rubric.vue";
+//TODO: flexible image rubric initialization
+import ImgRubric from "@/client/components/home/img_rubric.vue";
+import { initial_data } from "@/client/assets/init/initial_info.js";
 
 export default {
   name: "home",
   components: {
-    Home
+    TextRubric,
+    ImgRubric
   },
+  data: () => ({
+      items: initial_data.pages.home.rubrics
+  }),
   computed: {
      binding () {
        const binding = {}

@@ -3,9 +3,7 @@
       <app-drawer app></app-drawer>
       <app-header></app-header>
         <v-content class="bw-container">
-           <v-container fluid>
-              <app-body></app-body>
-           </v-container>
+            <app-body></app-body>
         </v-content>
       <app-footer></app-footer>
   </v-app>

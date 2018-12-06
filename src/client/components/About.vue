@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <p>tel: {{ phone }}</p>
     <ul>
       <li><a v-bind:href="github" target="_blank">Github</a></li>
