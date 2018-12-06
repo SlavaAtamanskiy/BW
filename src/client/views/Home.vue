@@ -17,8 +17,7 @@
 
 // @ is an alias to /src
 import TextRubric from "@/client/components/home/text_rubric.vue";
-//TODO: flexible image rubric initialization
-import ImgRubric from "@/client/components/home/img_rubric.vue";
+import ImgRubric from "@/client/components/home/img_rubric.vue"; //TODO:image rubric needs some flexibility while resizing
 import { initial_data } from "@/client/assets/init/initial_info.js";
 
 export default {

@@ -1,6 +1,6 @@
 <template>
 
-  <v-navigation-drawer app v-model="drawer" style="max-height: 100%" dark class="secondary">
+  <v-navigation-drawer app v-model="drawer" style="max-height: 100%" dark class="secondary" disable-resize-watcher>
 
    <v-list class="pa-1">
     <v-list-tile avatar>

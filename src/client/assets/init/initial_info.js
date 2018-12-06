@@ -36,7 +36,7 @@ let hw_txt = "<p>&nbsp;&nbsp;&nbsp;The importance of hard work cannot be underst
  "how to do that then anything in life becomes possible.</p>";
 
 let news = "<p>&nbsp;&nbsp;&nbsp;Packed with adventure, mystery and thrills, these Halloween stories are great ways to bring the family together over some shared scary fun. For kids, a good Halloween story lets them experience these stories through the characters' eyes, filling in the details of their worlds with their own imaginations. It also introduces children to the downright fun of being scared silly.</p>"+
-"<img src='http://wallpapersqq.net/wp-content/uploads/2015/10/Helloween-30-1200x800.jpg' height='350px' width='auto'/>"+
+"<img src='https://raw.githubusercontent.com/SlavaAtamanskiy/Simple-Database/master/src/client/assets/init/images/helloween.jpg' height='350px' width='auto'/>"+
 "<p>&nbsp;&nbsp;&nbsp;At one narrative per page, these stories are adapted for young listeners, making them especially great as Halloween party entertainment. Tell these stories aloud and discover the joy of storytelling -- with a scary twist.</p>"+
 "<p>&nbsp;&nbsp;&nbsp;The sections below will take you to collections of Halloween stories. Browse through them to rediscover old classics, or find new scary family favorites.</p>"+
 "<p>&nbsp;&nbsp;&nbsp;Ghost Stories: Tales of haunted houses, scary spirits -- these spine-tingling stories are tough to beat. In this article, you'll find classic ghost stories from famous authors -- Washington Irving's headless horseman, Mark Twain's Cardiff Giant -- as well as more modern takes on ghosts.</p>"+
@@ -49,7 +49,10 @@ const initial_data = {
       home: {
           rubrics: [
             {title: "News: Today is Helloween:)", type: "txt", contens: news, color: "orange lighten-2", dark:true},
-            {title: "Humor", type: "img", contens: "", images: ["@/client/assets/init/images/3.gif", "../../assets/init/images/2.jpg", "../../assets/init/images/1.jpg"], color: "green lighten-2", dark:true},
+            {title: "Humor", type: "img", contens: "", images: ["https://raw.githubusercontent.com/SlavaAtamanskiy/Simple-Database/master/src/client/assets/init/images/1.jpg",
+                                                                "https://raw.githubusercontent.com/SlavaAtamanskiy/Simple-Database/master/src/client/assets/init/images/2.jpg",
+                                                                "https://raw.githubusercontent.com/SlavaAtamanskiy/Simple-Database/master/src/client/assets/init/images/3.gif"],
+                                                                color: "green lighten-2", dark:true},
             {title: "Hard work", type: "txt", contens: hw_txt, color: "blue lighten-2", dark:true }
           ]
      }
