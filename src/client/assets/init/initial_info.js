@@ -59,4 +59,4 @@ const initial_data = {
   }
 };
 
-module.exports.initial_data = initial_data;
+export default initial_data;

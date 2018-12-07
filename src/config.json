@@ -1,6 +1,6 @@
 {
-  "apiPrefix":"http://localhost:8081",
-  "serverPort":"8081",
+  "apiPrefix":"http://localhost:8090",
+  "serverPort":"8090",
   "db":{
     "name":"bw",
     "host":"localhost",
