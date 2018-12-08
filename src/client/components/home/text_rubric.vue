@@ -1,6 +1,6 @@
 <template>
-  <v-card :dark="dark" :color="color">
-    <v-card-title>
+  <v-card :dark="dark" :color="color" class="pa-4">
+    <v-card-title class="justify-center">
       <h1>{{ title }}</h1>
     </v-card-title>
     <v-card-text>

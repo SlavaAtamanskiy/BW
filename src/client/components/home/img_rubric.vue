@@ -1,10 +1,10 @@
 <template>
-      <v-card :dark="dark" :color="color">
-        <v-card-title>
+      <v-card :dark="dark" :color="color" class="pt-4">
+        <v-card-title class="justify-center">
           <h1>{{ title }}</h1>
         </v-card-title>
         <v-container grid-list-sm fluid>
-          <v-layout row wrap>
+          <v-layout row wrap class="grey lighten-5">
               <v-flex v-for="(path, n) in images" :key="n" xs4>
                 <v-card flat tile>
                   <v-img :src="path" height="300px" width="310px"></v-img>
