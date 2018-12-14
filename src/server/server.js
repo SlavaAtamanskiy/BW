@@ -13,7 +13,7 @@ import user from "./controllers/users.js";
 
 mongoose.Promise = global.Promise;
 let app = express();
-const PORT = process.env.PORT || 8091;
+const PORT = process.env.PORT || 8090;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

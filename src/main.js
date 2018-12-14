@@ -14,7 +14,7 @@ Vue.use(Vuetify, {
   theme:{
    primary: colors.blueGrey.darken1,
    secondary: '#687894',
-   accent: colors.green.base,
+   accent: '#5d6b84',
    error: colors.red.base,
    warning: colors.yellow.base,
    info: colors.blue.base,

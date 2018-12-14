@@ -17,7 +17,7 @@
     <div v-for="(item, i) in items" :key="i">
 
        <div v-if="item.items.length > 0">
-          <v-list-group v-model="item.active" no-action @click="listItemOnClick(item)">
+          <v-list-group v-model="item.active" no-action class="secondary" @click="listItemOnClick(item)">
 
                 <v-list-tile slot="activator">
                   <v-list-tile-action>
@@ -26,10 +26,10 @@
                   <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                 </v-list-tile>
 
-                <v-list-tile v-for="(subitem, z) in item.items" :key="z" @click="">
-
+                <v-list-tile v-for="(subitem, z) in item.items" :key="z" class="accent" @click="">
+                                        
                     <v-list-tile-action>
-                      <v-icon medium v-bind:color="item.color">{{ subitem.icon }}</v-icon>
+                      <v-icon medium v-bind:color="subitem.color">{{ subitem.icon }}</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-title>{{ subitem.title }}</v-list-tile-title>
 
