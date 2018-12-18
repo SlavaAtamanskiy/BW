@@ -11,7 +11,7 @@ npm install
 ```
 npm start
 
-P.S: before starting server make sure MongoDB Database installed and launched.
+P.S: before starting server make sure MongoDB Database (4.0) installed and launched.
 ```
 
 ## Starts client
