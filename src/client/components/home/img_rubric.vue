@@ -3,20 +3,46 @@
         <v-card-title class="justify-center">
           <h1>{{ title }}</h1>
         </v-card-title>
-        <v-container grid-list-sm fluid>
-          <v-layout row wrap class="grey lighten-5">
-              <v-flex v-for="(path, n) in images" :key="n" xs4>
-                <v-card flat tile>
-                  <v-img :src="path" height="300px" width="310px"></v-img>
-                </v-card>
-              </v-flex>
-         </v-layout>
-       </v-container>
+        <div class="container-grid">
+          <div class="wrapper">
+             <div v-for="(path, n) in images" :key="n" class="image-container">
+                <img :src="path">
+             </div>
+          </div>
+        </div>
        <v-card-text>
          <span v-html="contens"></span>
        </v-card-text>
-      </v-card>
+     </v-card>
 </template>
+
+<style scoped>
+
+.container-grid {
+   display: block;
+   background-color: #FFFF;
+   border-radius: .2rem;
+   text-align: center;
+   margin: 1rem;
+   padding: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.image-container {
+  flex: 1 1;
+}
+
+img {
+  height:300px;
+  width: 300px;
+}
+
+</style>
 
 <script>
 
