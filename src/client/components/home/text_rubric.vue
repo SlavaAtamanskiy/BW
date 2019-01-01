@@ -9,6 +9,16 @@
   </v-card>
 </template>
 
+<style>
+
+@media (max-width: 1000px) {
+  .v-card__text img {
+    display:none;
+  }
+}
+
+</style>
+
 <script>
 
 export default {
